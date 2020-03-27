@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>koa+mongodb修改</title>
+    </head>
+    <body>
+        <form action="/doUpdate" method="post">
+            <input type="hidden" name="id" value="{{@user._id}}">
+            用户名: <input type="text" name="name" value="{{user.name}}">
+            <br />
+            年    龄: <input type="text" name="age" value="{{user.age}}">
+            <br />
+            <input type="submit" value="提交">
+        </form>
+    </body>
+</html>

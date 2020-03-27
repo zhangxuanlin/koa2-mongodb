@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>koa-artTemplate</title>
+    </head>
+    <body>
+        <h1>这是koa-artTemplate</h1>
+        <h2>输出：<%= name%></h2>
+        <h2>输出：{{ name }}</h2>
+        <p>相加：{{ a + b }}</p>
+        <div>原文输出：
+            {{@ p }}
+        </div>
+        <div>条件：
+            {{ if c > 10 }}
+                大于10
+            {{ else }}
+            小于等于10
+            {{/if}}
+        </div>
+        <div>
+            循环：
+            {{ each d }}
+                <p>{{ $index }} - {{ $value.name }} - {{ $value.age }}</p>
+            {{ /each }}
+        </div>
+        <div>
+            子模板：
+            {{ include './public/foot.html' }}
+        </div>
+    </body>
+</html>
